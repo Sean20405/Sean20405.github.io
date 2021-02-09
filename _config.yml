@@ -4,7 +4,7 @@ title: "Sean20405"
 description: "A place I record my life, my study, and I"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
-baseurl: /jekyll-theme-memoirs
+baseurl:
 google_analytics: 'UA-xxxxxxxx-1'
 mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 include: ["_pages"]
@@ -18,7 +18,7 @@ authors:
     display_name: Sean
     gravatar: e56154546cf4be74e393c62d1ae9f9d4
     email: esean931112@gmail.com
-    web: {{ site.baseurl }}/about/
+    web: https://sean20405.github.io/about
     twitter: https://twitter.com/wowthemesnet
     description: "Author of Mediumish, a Bootstrap Medium styled template available for WordPress, HTML, Ghost and Jekyll. You are currently previewing Jekyll template demo."
 
