@@ -7,22 +7,26 @@ tags: [ Website, Jekyll, Cmder, Github Page ]
 disqus: false
 ---
 
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/ocean.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
 因為我覺得我上一篇好像打太多廢話了，所以整理了架設的重點
 
 #### 創建 github page
-URL：https://github.com/
-創建資料庫(Ｃreate Repository)，名稱：`[User name].github.io`（中括號裡填自己的使用者名稱）
+URL：[https://github.com/](https://github.com/)  
+創建資料庫(Ｃreate Repository)，名稱：`[User name].github.io`（中括號裡填自己的使用者名稱）  
 
 #### 下載Ruby
-URL：https://rubyinstaller.org/downloads/
+URL：[https://rubyinstaller.org/downloads/](https://rubyinstaller.org/downloads/)  
 載 WITH DEVKIT 的
 
 #### 下載Cmder
-URL：https://cmder.net/
+URL：[https://cmder.net/](https://cmder.net/)  
 mini 版無 git 工具
 
 #### 找主題
-URL：http://jekyllthemes.org/ or https://jekyllthemes.io/ or ant others.
+URL：[http://jekyllthemes.org/](http://jekyllthemes.org/) or [https://jekyllthemes.io/](https://jekyllthemes.io/) or ant others.
 
 #### 打指令
 ##### in "Start Command Prompt with Ruby"
