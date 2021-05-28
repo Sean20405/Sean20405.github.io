@@ -12,4 +12,4 @@ permalink: /about
 <br><br/>
 
 #### Contact me
-[![]({{ site.baseurl }}/assets/images/github-icon.png)　github](https://github.com/Sean20405)　　　　[![]({{ site.baseurl }}/assets/images/facebook-icon.png)　Facebook](https://www.facebook.com/profile.php?id=100015000678361)　　　　[![]({{ site.baseurl }}/assets/images/gmail-icon.png)　gmail](https://esean931112@gmail.com)
+[![]({{ site.baseurl }}/assets/images/github-icon.png)　github](https://github.com/Sean20405)　　　　[![]({{ site.baseurl }}/assets/images/facebook-icon.png)　Facebook](https://www.facebook.com/profile.php?id=100015000678361)　　　　[![]({{ site.baseurl }}/assets/images/gmail-icon.png)　gmail](mailto:esean931112@gmail.com)

@@ -7,10 +7,6 @@ tags: [ Website, Jekyll, Cmder, Github Page ]
 disqus: false
 ---
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/ocean.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-
 既然這是這個網站的第一篇文章，那我就來記錄架設過程以及我遇到的問題吧
 
 ### Why Jekyll?
