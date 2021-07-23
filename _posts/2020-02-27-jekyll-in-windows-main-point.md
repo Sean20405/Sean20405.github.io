@@ -7,10 +7,6 @@ tags: [ Website, Jekyll, Cmder, Github Page ]
 disqus: false
 ---
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/ocean.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-
 因為我覺得我上一篇好像打太多廢話了，所以整理了架設的重點
 
 #### 創建 github page
@@ -24,6 +20,7 @@ URL：[https://rubyinstaller.org/downloads/](https://rubyinstaller.org/downloads
 #### 下載Cmder
 URL：[https://cmder.net/](https://cmder.net/)  
 mini 版無 git 工具
+> 更：若有 powershell 可用，便可省略
 
 #### 找主題
 URL：[http://jekyllthemes.org/](http://jekyllthemes.org/) or [https://jekyllthemes.io/](https://jekyllthemes.io/) or ant others.
@@ -60,3 +57,5 @@ $ bundle install
 $ bundle exec jekyll server --watch
 ```
 # DONE！
+
+> 更：若有 powershell 可直接在裡面操作上面所有的指令

@@ -53,6 +53,9 @@ disqus: false
 > 注：最新版本都是 for 64bits 的，如果你的電腦是 32bits，請下載 v1.3.4。  
 > 參考：[https://github.com/cmderdev/cmder/issues/1699]([https://github.com/cmderdev/cmder/issues/1699)
 
+
+更：換了新電腦與新系統之後，才翻到有 powershell 可用，因此若電腦裡有內建的 powershell，就可以略過此段，底下指令也可全執行在上面。
+
 #### [選] 找主題
 網路上其實多 Jekyll 的主題，這裡列了幾個網站，當然你也可以自己找到你更喜歡的  
 
@@ -99,6 +102,8 @@ $ bundle exec jekyll server --watch
 如果 Cmder 出現以下訊息，便代表成功了！然後就可以去訊息給的網址看成果了
 
 ![](https://i.imgur.com/dFfIkuG.png)
+
+更：可全運作在 powershell 中
 
 ### 參考網站：
 * [https://minglun-wu.medium.com/%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%80%8B%E5%B1%AC%E6%96%BC%E8%87%AA%E5%B7%B1%E7%9A%84-%E7%A8%8B%E5%BC%8F-%E9%83%A8%E8%90%BD%E6%A0%BC-4d295ed96236](https://minglun-wu.medium.com/%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%80%8B%E5%B1%AC%E6%96%BC%E8%87%AA%E5%B7%B1%E7%9A%84-%E7%A8%8B%E5%BC%8F-%E9%83%A8%E8%90%BD%E6%A0%BC-4d295ed96236)  
