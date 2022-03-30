@@ -6,7 +6,6 @@ logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
 baseurl:
 google_analytics: 'UA-xxxxxxxx-1'
-mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 include: ["_pages"]
 permalink: /:title/
 email: esean931112@gmail.com
@@ -21,9 +20,6 @@ authors:
     gravatar: 44866303d44a9b3ee47aecbbd17ee842
     email: esean931112@gmail.com
     web: https://Sean20405.github.io/about
-    twitter: https://twitter.com/wowthemesnet
-    description: "Author of Mediumish, a Bootstrap Medium styled template available for WordPress, HTML, Ghost and Jekyll. You are currently previewing Jekyll template demo."
-
 
 # Plugins
 plugins:
