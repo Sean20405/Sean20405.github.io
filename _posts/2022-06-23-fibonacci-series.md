@@ -34,7 +34,7 @@ int main(){
     return 0;
 }
 ```
-![](/../assets/img/post/fibonacci/zsKtCsA.png){: .normal}
+![](/assets/img/post/fibonacci/zsKtCsA.png){: .normal}
 
 
 ### 迴圈($$O(n)$$)
@@ -64,7 +64,7 @@ int main(){
     return 0;
 }
 ```
-![](/../assets/img/post/fibonacci/VGxH56F.png){: .normal}
+![](/assets/img/post/fibonacci/VGxH56F.png){: .normal}
 
 
 ### 矩陣快速冪($$O(log\ n)$$)
@@ -122,4 +122,4 @@ int main(){
     return 0;
 }
 ```
-![](/../assets/img/post/fibonacci/Qho0xEo.png){: .normal}
+![](/assets/img/post/fibonacci/Qho0xEo.png){: .normal}

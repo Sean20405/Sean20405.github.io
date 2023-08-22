@@ -5,7 +5,7 @@ author: Sean
 categories: [ 教學 ]
 tags: [ Website, Jekyll, Cmder, GitHub Page ]
 image:
-    path: /../assets/img/Jekyll_github_icon.png
+    path: /assets/img/Jekyll_github_icon.png
 ---
 既然這是這個網站的第一篇文章，那我就來記錄架設過程以及我遇到的問題吧
 
@@ -20,7 +20,7 @@ image:
 
 先到 GitHub 註冊，然後它會出現一頁表單，問關於你的一些事情，如下圖，填不填都可（我是有填啦，方便他以後投放一些我有興趣的廣告）。
 
-![](/../assets/img/post/blog/zhj3tWS.png)
+![](/assets/img/post/blog/zhj3tWS.png)
 
 接著一般註冊流程結束後，創建資料庫(Ｃreate Repository)，如下圖，記得 Repository Name 要是 `[User name].github.io`（中括號裡填自己的使用者名稱），下面設定一下，Done！
 
@@ -86,7 +86,7 @@ bundle exec jekyll server --watch
 
 出現以下訊息，便代表成功了！然後就可以去訊息給的網址看成果了
 
-![](/../assets/img/post/blog/dFfIkuG.png)
+![](/assets/img/post/blog/dFfIkuG.png)
 
 ### 參考網站：
 * [建立一個屬於自己的(程式)部落格！. 透過 Github Page + Hexo來免費建立自己的Bl \| by 吳明倫 MingLun Wu \| Medium](https://minglun-wu.medium.com/%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%80%8B%E5%B1%AC%E6%96%BC%E8%87%AA%E5%B7%B1%E7%9A%84-%E7%A8%8B%E5%BC%8F-%E9%83%A8%E8%90%BD%E6%A0%BC-4d295ed96236) 
@@ -101,7 +101,7 @@ bundle exec jekyll server --watch
 2. 無法執行 `$ bundle exec jekyll server --watch`  
    原因可能有很多，以下舉我遇到的一個問題  
    
-   <img src="/../assets/img/post/blog/IGmL2tv.png" width=600 height=750 />
+   <img src="/assets/img/post/blog/IGmL2tv.png" width=600 height=750 />
    
    黃框中寫道找不到 webrick 這個檔案，而實際去看檔案會發現最上面有一個 `require "webrick"`，然後就去找找到了以下解法  
    sol：輸入 `bundle add webrick`  
