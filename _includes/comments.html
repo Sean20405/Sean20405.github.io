@@ -1,12 +1,5 @@
-<!-- Comments
-================================================== -->
-{% if page.comments != false %} 
-<div class="comments">
-    <button class="btn btn-dark show-comments">Load Comments</button>         
-    <div id="comments">  
-        <h4 class="mb-4">Comments</h4>                 
-            {% include disqus.html %}     
-    <div class="clearfix"></div>              
-    </div>    
-</div>       
+<!--  The comments switcher -->
+{% if page.comments and site.comments.active %}
+  {% capture path %}comments/{{ site.comments.active }}.html{% endcapture %}
+  {% include {{ path }} %}
 {% endif %}

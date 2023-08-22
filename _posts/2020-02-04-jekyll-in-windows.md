@@ -1,16 +1,16 @@
 ---
-layout: post
-title:  "在 Windows 上用 Jekyll 架設自己的 Blog"
+title: 在 Windows 上用 Jekyll 架設自己的 Blog
+date: 2020-02-04 18:00:00 +0800
 author: Sean
 categories: [ 教學 ]
 tags: [ Website, Jekyll, Cmder, GitHub Page ]
-disqus: false
+image:
+    path: /../assets/img/Jekyll_github_icon.png
 ---
-
 既然這是這個網站的第一篇文章，那我就來記錄架設過程以及我遇到的問題吧
 
 ### Why Jekyll?
-原先的構想是自己刻一個 HTML+CSS 再放上 GitHub，但寫了一些之後發現有夠麻煩，排版困難而且還要設定一堆連結，便想說先去搞定 Github 的那部份好了，找了找資料，找到[這篇](https://minglun-wu.medium.com/%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%80%8B%E5%B1%AC%E6%96%BC%E8%87%AA%E5%B7%B1%E7%9A%84-%E7%A8%8B%E5%BC%8F-%E9%83%A8%E8%90%BD%E6%A0%BC-4d295ed96236)，沒想到還有 Hexo 這種東西，然而，在我建好 GitHub Page 時官方的文件又寫到 Jekyll，於是我再度找他們的差異，最後卻選擇了 Jekyll，原因是大部分的資料都指出 Jekyll 的社群較廣，雖然不像 Hexo 有較多中文社群，但看點英文網站應該不會對我造成太大的負擔，所以我就選了 Jekyll（到後面真的遇到蠻多問題的...大部分還是得看其他人在 GitHub 或Stack Overflow 的回答才解決）。
+原先的構想是自己刻一個 HTML + CSS 再放上 GitHub，但寫了一些之後發現有夠麻煩，排版困難而且還要設定一堆連結，便想說先去搞定 Github 的那部份好了，找了找資料，找到 [這篇](https://minglun-wu.medium.com/%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%80%8B%E5%B1%AC%E6%96%BC%E8%87%AA%E5%B7%B1%E7%9A%84-%E7%A8%8B%E5%BC%8F-%E9%83%A8%E8%90%BD%E6%A0%BC-4d295ed96236)，沒想到還有 Hexo 這種東西，然而，在我建好 GitHub Page 時官方的文件又寫到 Jekyll，於是我再度找他們的差異，最後卻選擇了 Jekyll，原因是大部分的資料都指出 Jekyll 的社群較廣，雖然不像 Hexo 有較多中文社群，但看點英文網站應該不會對我造成太大的負擔，所以我就選了 Jekyll（到後面真的遇到蠻多問題的...大部分還是得看其他人在 GitHub 或Stack Overflow 的回答才解決）。
 
 好的，以下正文開始。
 
@@ -20,7 +20,7 @@ disqus: false
 
 先到 GitHub 註冊，然後它會出現一頁表單，問關於你的一些事情，如下圖，填不填都可（我是有填啦，方便他以後投放一些我有興趣的廣告）。
 
-![](https://i.imgur.com/zhj3tWS.png)
+![](/../assets/img/post/blog/zhj3tWS.png)
 
 接著一般註冊流程結束後，創建資料庫(Ｃreate Repository)，如下圖，記得 Repository Name 要是 `[User name].github.io`（中括號裡填自己的使用者名稱），下面設定一下，Done！
 
@@ -41,74 +41,57 @@ disqus: false
 
 下載 WITH DEVKIT 的，接著就跟著指示，同意該同意的，接著會自動打開一個類似 cmd 的東東，就照著上面指示（我都下載第一個的）。
 
-#### 下載 Cmder
-> 名稱：Cmder  
-> 網址：[https://cmder.net/](https://cmder.net/)  
-> 功能：在 Windows 上執行 Linux 的終端機指令
-
-因為 Windows 內建的命令提示字元功能很少，且網路上連官方文件的教學都是以 Linux 為主，所以便找到了這個程式，不用架 Linux 虛擬機就能解決。  
-  
-進去官網後會看到兩個下載的地方，Mini 是不含一些 git 工具的，所以如果你的電腦本身就有下載過 git，在這裡下載 mini 版就好了（檔案小很多）。
-
-> 注：最新版本都是 for 64bits 的，如果你的電腦是 32bits，請下載 v1.3.4。  
-> 參考：[https://github.com/cmderdev/cmder/issues/1699]([https://github.com/cmderdev/cmder/issues/1699)
-
-
-更：換了新電腦與新系統之後，才翻到有 powershell 可用，因此若電腦裡有內建的 powershell，就可以略過此段，底下指令也可全執行在上面。
-
-#### [選] 找主題
+#### ［選］ 找主題
 網路上其實多 Jekyll 的主題，這裡列了幾個網站，當然你也可以自己找到你更喜歡的  
 
-> [http://jekyllthemes.org/](http://jekyllthemes.org/)  
-> [https://jekyllthemes.io/](https://jekyllthemes.io/)  
+* [http://jekyllthemes.org/](http://jekyllthemes.org/)  
+* [https://jekyllthemes.io/](https://jekyllthemes.io/)  
 
-官方文件中也有[相關頁面](https://jekyllrb.com/docs/themes/)  
+官方文件中也有 [相關頁面](https://jekyllrb.com/docs/themes/)  
 
 #### 正式開始建置
 打開 Start Command Prompt with Ruby，輸入以下指令：  
   
 更新 gem
-```
-$ gem upgrade
+```shell
+gem upgrade
 ```
 下載 jekyll & bundler
-```
-$ gem install jekyll bundler
+```shell
+gem install jekyll bundler
 ```
 檢查版本（順便確認是否成功下載）
-```
-$ jekyll -v
+```shell
+jekyll -v
 ```
 
-<-----------------------------------------------接著以下在 Cmder 執行----------------------------------------------->
+打開 Powershell：
 
 clone 主題（這裡以一個在 [http://jekyllthemes.org/](http://jekyllthemes.org/) 找到的主題 [Memoirs](https://bootstrapstarter.com/bootstrap-templates/jekyll-theme-memoirs/) 為介紹）
-```
-$　git clone https://github.com/wowthemesnet/jekyll-theme-memoirs.git
+```shell
+git clone https://github.com/wowthemesnet/jekyll-theme-memoirs.git
 ```
 移進主題的資料夾
-```
-$ cd jekyll-theme-memoirs
+```shell
+cd jekyll-theme-memoirs
 ```
 安裝 bundle
-```
-$ bundle install
+```shell
+bundle install
 ```
 在本機端執行
+```shell
+bundle exec jekyll server --watch
 ```
-$ bundle exec jekyll server --watch
-```
 
-如果 Cmder 出現以下訊息，便代表成功了！然後就可以去訊息給的網址看成果了
+出現以下訊息，便代表成功了！然後就可以去訊息給的網址看成果了
 
-![](https://i.imgur.com/dFfIkuG.png)
-
-更：可全運作在 powershell 中
+![](/../assets/img/post/blog/dFfIkuG.png)
 
 ### 參考網站：
-* [https://minglun-wu.medium.com/%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%80%8B%E5%B1%AC%E6%96%BC%E8%87%AA%E5%B7%B1%E7%9A%84-%E7%A8%8B%E5%BC%8F-%E9%83%A8%E8%90%BD%E6%A0%BC-4d295ed96236](https://minglun-wu.medium.com/%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%80%8B%E5%B1%AC%E6%96%BC%E8%87%AA%E5%B7%B1%E7%9A%84-%E7%A8%8B%E5%BC%8F-%E9%83%A8%E8%90%BD%E6%A0%BC-4d295ed96236)  
-* [https://jekyllrb.com/docs/installation/windows/](https://jekyllrb.com/docs/installation/windows/)  
-* [https://stackoverflow.com/questions/10012181/bundle-install-returns-could-not-locate-gemfile](https://stackoverflow.com/questions/10012181/bundle-install-returns-could-not-locate-gemfile)
+* [建立一個屬於自己的(程式)部落格！. 透過 Github Page + Hexo來免費建立自己的Bl \| by 吳明倫 MingLun Wu \| Medium](https://minglun-wu.medium.com/%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%80%8B%E5%B1%AC%E6%96%BC%E8%87%AA%E5%B7%B1%E7%9A%84-%E7%A8%8B%E5%BC%8F-%E9%83%A8%E8%90%BD%E6%A0%BC-4d295ed96236) 
+* [Jekyll on Windows \| Jekyll • Simple, blog-aware, static sites](https://jekyllrb.com/docs/installation/windows/) 
+* [ruby on rails - bundle install returns "Could not locate Gemfile" - Stack Overflow](https://stackoverflow.com/questions/10012181/bundle-install-returns-could-not-locate-gemfile)
 
 ### 遇到問題彙整
 1. 無法執行 `$ bundle install`  
@@ -118,7 +101,7 @@ $ bundle exec jekyll server --watch
 2. 無法執行 `$ bundle exec jekyll server --watch`  
    原因可能有很多，以下舉我遇到的一個問題  
    
-   <img src="https://i.imgur.com/IGmL2tv.png" width=600 height=750 />
+   <img src="/../assets/img/post/blog/IGmL2tv.png" width=600 height=750 />
    
    黃框中寫道找不到 webrick 這個檔案，而實際去看檔案會發現最上面有一個 `require "webrick"`，然後就去找找到了以下解法  
    sol：輸入 `bundle add webrick`  

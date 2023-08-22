@@ -1,13 +1,13 @@
 ---
-layout: post
-title:  "各種求費氏數列第 n 項的寫法"
+title: 各種求費氏數列第 n 項的寫法
+date: 2022-06-23 18:00:00 +0800
 author: Sean
 categories: [ Algorithm ]
 tags: [ C++, Algorithm ]
-disqus: false
+math: true
 ---
 
-> 令 $$f(0)=0,\ f(1)=1$$，以及 $$f(n)=f(n-1)+f(n-2),\  \forall n>1$$。輸入非負整數 $$n$$，請輸出 $$f(n)$$ 除以 $$p$$ 的餘數， $$p=1e9+7$$。$$n<231$$　　　　　source: AP325
+> 令 $$f(0)=0,\ f(1)=1$$，以及 $$f(n)=f(n-1)+f(n-2),\  \forall n>1$$。輸入非負整數 $$n$$，請輸出 $$f(n)$$ 除以 $$p$$ 的餘數， $$p=1e9+7$$。$$n<231$$
 
 ### 遞迴(Slowest)
 ```cpp
@@ -34,7 +34,7 @@ int main(){
     return 0;
 }
 ```
-![](https://i.imgur.com/zsKtCsA.png)
+![](/../assets/img/post/fibonacci/zsKtCsA.png){: .normal}
 
 
 ### 迴圈($$O(n)$$)
@@ -64,7 +64,7 @@ int main(){
     return 0;
 }
 ```
-![](https://i.imgur.com/VGxH56F.png)
+![](/../assets/img/post/fibonacci/VGxH56F.png){: .normal}
 
 
 ### 矩陣快速冪($$O(log\ n)$$)
@@ -122,4 +122,4 @@ int main(){
     return 0;
 }
 ```
-![](https://i.imgur.com/Qho0xEo.png)
+![](/../assets/img/post/fibonacci/Qho0xEo.png){: .normal}

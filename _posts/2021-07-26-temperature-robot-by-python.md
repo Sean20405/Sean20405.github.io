@@ -1,9 +1,9 @@
 ---
-layout: post
-title:  "懶人神器！自動填體溫 讓你不再被記警告(By Python)"
+title: 懶人神器！自動填體溫 讓你不再被記警告（By Python）
+date: 2021-07-26 18:00:00 +0800
 author: Sean
 categories: [ Bot ]
-tags: [ Python, selenium, heroku ]
+tags: [ Python, Selenium, Heroku ]
 disqus: false
 ---
 
@@ -16,77 +16,13 @@ disqus: false
 ### Selenium 簡介
 一套瀏覽器自動化的工具，爬蟲的利器。可自動開啟瀏覽器，執行似人的點選、滾度、輸入等，也可取得網頁資訊，並進一步分析（常搭配 BeautifulSoup 一同使用）
 
-### heroku 簡介
+### Heroku 簡介
 
-常被用來架設網站，而這次被用來當作線上執行程式碼的地方（需要先設置環境變數，如參考1）
-
-直接上程式碼吧
+常被用來架設網站，而這次被用來當作線上執行程式碼的地方（需要先設置環境變數，如參考 1）
 
 ### 程式碼
 
-```py
-from selenium import webdriver
-from selenium.webdriver.support.select import Select
-import os
-import sys
-import random
-
-# set up
-options = webdriver.ChromeOptions()
-options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
-options.add_argument("--headless")
-options.add_argument("--disable-dev-shm-usage")
-options.add_argument("--no-sandbox")
-
-# build driver
-driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=options)
-driver.get("https://webap1.kshs.kh.edu.tw/kshsSSO/publicWebAP/bodyTemp/index.aspx")
-
-# find the security number (string security_code)
-secutity_number = driver.find_element_by_id("ContentPlaceHolder1_lbN").text
-
-# send security number
-i=0
-while True:
-    select = driver.find_element_by_id(f'ContentPlaceHolder1_RadioButtonList1_{i}')
-    value = select.get_attribute("value")
-    if secutity_number == value:
-        select.click()
-        break
-    i+=1
-    if i > 100: # protection mechanism
-        driver.close()
-        sys.exit()
-
-# send ID and submit
-ID = driver.find_element_by_id("ContentPlaceHolder1_txtId")
-ID.send_keys("<MYID>")
-submit_1 = driver.find_element_by_name("ctl00$ContentPlaceHolder1$btnId")
-submit_1.click()
-
-# send info
-ways = driver.find_element_by_id("ContentPlaceHolder1_rbType_1")
-ways.click()
-
-temp_1 = driver.find_element_by_id("ContentPlaceHolder1_ddl1")
-Select(temp_1).select_by_value("36")
-
-temp_2 = driver.find_element_by_id("ContentPlaceHolder1_ddl2")
-Select(temp_2).select_by_value(str(random.randint(4, 8)))
-
-attendance = driver.find_element_by_id("ContentPlaceHolder1_ddl3")
-Select(attendance).select_by_value("1")
-
-submit_2 = driver.find_element_by_id("ContentPlaceHolder1_btnId0")
-submit_2.click()
-
-# Close window
-driver.switch_to.alert.accept()
-driver.close()
-sys.exit()
-
-# DONE!
-```
+[Github](https://github.com/Sean20405/kshs-autotemp/blob/main/kshs_autotemp_on_heroku.py)
 
 ### 運作邏輯
 
@@ -96,7 +32,7 @@ sys.exit()
 
 ### 轉折？
 
-然而就在我寫好的一個禮拜後，那時候的我還在搞定 Heroku 排程的問題，並且順便用手動執行程式看看有沒有神奇的 Bug（Heroku 有內建 Console 能在上面執行），結果，結果，系統突然開始換題目QAQ，不僅每天題目不一樣，甚至還有不同形式！！！ 之前用 click 就可以了，那時還多了下拉式選單。
+然而就在我寫好的一個禮拜後，那時候的我還在搞定 Heroku 排程的問題，並且順便用手動執行程式看看有沒有神奇的 Bug（Heroku 有內建 Console 能在上面執行），結果，結果，系統突然開始換題目 QAQ，不僅每天題目不一樣，甚至還有不同形式！！！ 之前用 click 就可以了，那時還多了下拉式選單。
 
 但其實還算好解決，一個方法是我乖乖觀察個幾個禮拜，找出規律再寫，第二個就是 trial and error，然後再將答案存到資料庫遇到同樣的問題時直接抓答案，反正不限次數，況且又交給程式跑。然而，某一天突然出現了一題，「你是否有萬華等地之接觸史？」（當時恰逢萬華疫情剛爆發），無論填是或否都會過，但如果填是的話會被約談（還好那時候我還在觀望），之後我也不敢用第二種方法了。
 
@@ -110,6 +46,5 @@ sys.exit()
 
 ### Reference
 
-[Heroku 中使用 selenium 設定方法](https://aishuafei.com/heroku-selenium/)
-
-[動態網頁爬蟲第一道鎖 — Selenium教學：如何使用Webdriver、send_keys(附Python 程式碼)](https://medium.com/marketingdatascience/selenium%E6%95%99%E5%AD%B8-%E4%B8%80-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8webdriver-send-keys-988816ce9bed)
+* [Heroku 中使用 Selenium 設定方法](https://aishuafei.com/heroku-selenium/)
+* [動態網頁爬蟲第一道鎖 — Selenium 教學：如何使用 Webdriver、send_keys (附 Python 程式碼)](https://medium.com/marketingdatascience/selenium%E6%95%99%E5%AD%B8-%E4%B8%80-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8webdriver-send-keys-988816ce9bed)

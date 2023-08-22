@@ -1,123 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+---
+layout: compress
+# Default layout
+---
 
-    <link rel="icon" href="{{ site.baseurl }}/assets/images/logo.png">
-    <title>{{ page.title }} | {{site.name}}</title>
+<!doctype html>
 
-    {% seo %}
-    
-    <link href="{{ site.baseurl }}/assets/css/prism.css" rel="stylesheet"/>
+{% include origin-type.html %}
 
-    <link href="{{ site.baseurl }}/assets/css/theme.css" rel="stylesheet"/>
+{% include lang.html %}
 
-    <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
+{% capture prefer_mode %}
+  {% if site.theme_mode %}
+    data-mode="{{ site.theme_mode }}"
+  {% endif %}
+{% endcapture %}
 
-</head>
+<!-- `site.alt_lang` can specify a language different from the UI -->
+<html lang="{{ site.alt_lang | default: site.lang }}" {{ prefer_mode }}>
+  {% include head.html %}
 
-{% if jekyll.environment == 'production' %}
-<!-- change your GA id in _config.yml -->
-<script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', '{{site.google_analytics}}', 'auto');
-    ga('send', 'pageview');
-</script>
-{% endif %}
+  <body>
+    {% include sidebar.html lang=lang %}
 
-{% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
-<body>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-	<!-- defer loading of font and font awesome -->
-	<noscript id="deferred-styles">
-		<link href="https://fonts.googleapis.com/css?family=Sen:400,700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-	</noscript>
-
-    <!-- Begin Sidebar Navigation
-    ================================================== -->
-
-    <div class="sidebar">    
-    </div>   
-    <div class="nav-icon">
-        <div class="hamburger-bar"></div>
-    </div>
-    <div id="blackover-nav" class="blackover"></div>
-    <nav id="menu">
-        <ul>
-            <h3>Navigation</h3>
-            <li><a href="{{ site.baseurl }}/">Home</a></li>
-            <li><a href="{{ site.baseurl }}/about">About</a></li>    
-            <li><a href="{{ site.baseurl }}/categories">Categories</a></li>     
-        </ul>   
-    </nav>
-
-    {% include search-lunr.html %}
-
-
-    <!-- End Sidebar Navigation
-    ================================================== -->
-
-    <div class="site-content {% if page.url == '/' %} firstpage {% endif %}">
-
-    <div class="container">
-
-        <!-- Site Logo/Name
-        ================================================== -->
-   
-        <a class="navbar-brand" href="{{ site.baseurl }}/">
-            <img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.name }}"> <font color="Black", font size=6><b>Sean's Blog</b></font>
-        </a>  
-   
-
-        <!-- Site Tag
-        ================================================== -->
-        {% if page.url == '/' %}
-            <p class="sitetag">
-                {{ site.description }}
-            </p>
-        {% endif %}
-
-        <!-- Content
-        ================================================== -->
-        <div class="main-content">
-            {{ content }}
-        </div>
+    <div id="main-wrapper" class="d-flex justify-content-center">
+      <div id="main" class="container px-xxl-5">
+        {% include topbar.html lang=lang %}
+        {{ content }}
+        {% include_cached search-results.html lang=lang %}
+      </div>
     </div>
 
-    <!-- Begin Footer
-    ================================================== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-sm-12 text-center text-lg-left">
-                    Copyright © {{ site.time | date: "%Y" }} {{ site.name }} 
-                </div>
-                <div class="col-md-6 col-sm-12 text-center text-lg-right">
-                    Powered by <a target="_blank" href="https://jekyllrb.com/">Jekyll</a><br/>
-                    Theme by <a target="_blank" href="https://www.wowthemes.net/memoirs-free-jekyll-theme/">Memoirs</a>
-                </div>
-            </div>
+    {% include_cached footer.html lang=lang %}
+
+    <div id="mask"></div>
+
+    <button id="back-to-top" aria-label="back-to-top" class="btn btn-lg btn-box-shadow">
+      <i class="fas fa-angle-up"></i>
+    </button>
+
+    {% if site.pwa.enabled %}
+      <div
+        id="notification"
+        class="toast"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+        data-bs-animation="true"
+        data-bs-autohide="false"
+      >
+        <div class="toast-header">
+          <button
+            type="button"
+            class="btn-close ms-auto"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
         </div>
-    </footer>
-    <!-- End Footer
-    ================================================== -->
-
-    </div> <!-- /.site-content -->
-
-    <!-- Scripts (if you need bootstrap.js, please add it yourself. I didn't use it for performance reasons, it was not needed in this theme)
-    ================================================== -->
-
-    <script src="{{ site.baseurl }}/assets/js/prism.js"></script>
-
-    <script src="{{ site.baseurl }}/assets/js/theme.js"></script>
-
-    {% if site.lazyimages == "enabled" %}
-    <script src="{{ site.baseurl }}/assets/js/lazyload.js"></script>
+        <div class="toast-body text-center pt-0">
+          <p class="px-2 mb-3">{{ site.data.locales[lang].notification.update_found }}</p>
+          <button type="button" class="btn btn-primary" aria-label="Update">
+            {{ site.data.locales[lang].notification.update }}
+          </button>
+        </div>
+      </div>
     {% endif %}
-</body>
+
+    {% include js-selector.html %}
+
+    {% if page.mermaid %}
+      {% include mermaid.html %}
+    {% endif %}
+
+    {% include_cached search-loader.html %}
+  </body>
 </html>
