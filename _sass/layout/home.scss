@@ -43,8 +43,9 @@
 
       .card-title {
         @extend %text-clip;
-
+        line-height: 1.5;
         font-size: 1.25rem;
+        font-weight: 600;
       }
 
       %muted {
