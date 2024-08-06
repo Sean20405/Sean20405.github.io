@@ -27,7 +27,7 @@ math: true
 * A+
 
 #### 評分
-* Loading：1.5 / 5
+* Workload：1.5 / 5
 * 甜度：4 / 5
 * 學到的東西：1 / 5
   * 因為高中多少都學過了，新東西大概就數論、圖論、關係（relation）吧
@@ -65,7 +65,7 @@ math: true
 * A+
 
 #### 評分
-* Loading：4 / 5
+* Workload：4 / 5
     * 我期中期末花蠻多時間在這上面的，但也有可能是我不適合硬體ㄏㄏ
 * 甜度：3 / 5
     * 考試偏多，但大部分都有考古，所以還算普通
@@ -76,7 +76,7 @@ math: true
 
 ### [必修] 資料結構與物件導向程式設計 教授：詹力韋
 #### 上課內容
-* OOP：C++（class、constructor、operator overloading、繼承、virtual func.）
+* OOP：C++（class、constructor、operator overWorkload、繼承、virtual func.）
 * DS：BST、Binary heap、AVL tree、最短路徑、MST ...
 
 #### 上課方式
@@ -102,7 +102,7 @@ math: true
 * A+
 
 #### 評分
-* Loading：2.5 / 5
+* Workload：2.5 / 5
 * 甜度：3.5 / 5
 * 學到的東西：4 / 5
 * 綜合：4 / 5
@@ -136,7 +136,7 @@ math: true
 * B+
 
 #### 評分
-* Loading：1(5) / 5
+* Workload：1(5) / 5
     * 可完全不讀直接去考期中期末，但認真要讀得花不少時間
 * 甜度：2 / 5
     * 雖然可及格但很難高分
@@ -167,7 +167,7 @@ math: true
 * A+
 
 #### 評分
-* Loading：3.5 / 5
+* Workload：3.5 / 5
     * 對我而言學新語言本來就不簡單🥲
 * 甜度：3 / 5
     * 要花時間才能拿到分數，所以算普通
