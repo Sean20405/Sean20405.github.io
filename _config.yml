@@ -23,7 +23,7 @@ title: Sean's blog # the main title
 tagline: A site to record life # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  A minimal, responsive and feature-rich Jekyll theme for technical writing.
+  A site to record life
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: "https://sean20405.github.io"
@@ -41,7 +41,7 @@ social:
     - /about # change to your github homepage
     - https://www.facebook.com/profile.php?id=100015000678361
 
-google_site_verification: # fill in to your verification string
+google_site_verification: google0b78c5d763389287.html # fill in to your verification string
 
 # ↑ --------------------------
 # The end of `jekyll-seo-tag` settings
