@@ -87,12 +87,14 @@
             <div class="card-body">
               {% include datetime.html date=post.date class="small" lang=include.lang %}
               <h4 class="pt-0 my-2" data-toc-skip>{{ post.title }}</h4>
-              <div class="text-muted small">
-                <p>
-                  {% include no-linenos.html content=post.content %}
-                  {{ content | markdownify | strip_html | truncate: 200 | escape }}
-                </p>
-              </div>
+              {% if post.summary %}
+                <div class="text-muted small">
+                  <p>
+                    {% include no-linenos.html content=post.summary %}
+                    {{ content | markdownify | strip_html | truncate: 200 | escape }}
+                  </p>
+                </div>
+              {% endif %}
             </div>
           </a>
         </div>

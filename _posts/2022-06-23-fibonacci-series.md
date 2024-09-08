@@ -5,6 +5,7 @@ author: Sean
 categories: [ Algorithm ]
 tags: [ C++, Algorithm ]
 math: true
+summary: 在學完矩陣快速冪之後突然好奇各種方法的速度如何，於是有了這篇測試的誕生。
 ---
 
 > 令 $$f(0)=0,\ f(1)=1$$，以及 $$f(n)=f(n-1)+f(n-2),\  \forall n>1$$。輸入非負整數 $$n$$，請輸出 $$f(n)$$ 除以 $$p$$ 的餘數， $$p=1e9+7$$。$$n<231$$

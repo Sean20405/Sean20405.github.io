@@ -4,8 +4,7 @@ date: 2020-02-04 18:00:00 +0800
 author: Sean
 categories: [ 教學 ]
 tags: [ Website, Jekyll, Cmder, GitHub Page ]
-image:
-    path: /assets/img/Jekyll_github_icon.png
+summary: 既然這是這個網站的第一篇文章，那我就來記錄架設過程以及我遇到的問題吧
 ---
 既然這是這個網站的第一篇文章，那我就來記錄架設過程以及我遇到的問題吧
 

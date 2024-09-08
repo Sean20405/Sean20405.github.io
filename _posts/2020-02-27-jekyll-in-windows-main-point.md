@@ -4,6 +4,7 @@ date: 2020-02-27 18:00:00 +0800
 author: Sean
 categories: [ 教學 ]
 tags: [ Website, Jekyll, Cmder, GitHub Page ]
+summary: 因為我覺得我上一篇好像打太多廢話了，所以整理了架設的重點
 ---
 
 因為我覺得我上一篇好像打太多廢話了，所以整理了架設的重點

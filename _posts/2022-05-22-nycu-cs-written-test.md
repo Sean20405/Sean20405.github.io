@@ -5,6 +5,7 @@ author: Sean
 categories: [ 二階筆試 ]
 tags: [ NYCU, 二階 ]
 math: true
+summary: 網路上有關交大資工二階筆試的資訊很少，受到去年幾位學長的 HackMD，萌生了想背題目出來的想法。
 ---
 以下題目皆為選擇題，只是選項我記不起來，所以就算ㄌ哈哈哈
 
