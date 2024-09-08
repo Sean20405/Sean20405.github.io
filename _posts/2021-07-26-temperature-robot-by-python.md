@@ -40,11 +40,11 @@ disqus: false
 
 ### 未來
 
-* 把排程設定好
-* 解決換題目的問題
-* 製作手機 GUI，更容易推廣給其他人而不需洩漏身分證字號
+- 把排程設定好
+- 解決換題目的問題
+- 製作手機 GUI，更容易推廣給其他人而不需洩漏身分證字號
 
 ### Reference
 
-* [Heroku 中使用 Selenium 設定方法](https://aishuafei.com/heroku-selenium/)
-* [動態網頁爬蟲第一道鎖 — Selenium 教學：如何使用 Webdriver、send_keys (附 Python 程式碼)](https://medium.com/marketingdatascience/selenium%E6%95%99%E5%AD%B8-%E4%B8%80-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8webdriver-send-keys-988816ce9bed)
+- [Heroku 中使用 Selenium 設定方法](https://aishuafei.com/heroku-selenium/)
+- [動態網頁爬蟲第一道鎖 — Selenium 教學：如何使用 Webdriver、send_keys (附 Python 程式碼)](https://medium.com/marketingdatascience/selenium%E6%95%99%E5%AD%B8-%E4%B8%80-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8webdriver-send-keys-988816ce9bed)

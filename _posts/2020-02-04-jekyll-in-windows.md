@@ -44,8 +44,8 @@ image:
 #### ［選］ 找主題
 網路上其實多 Jekyll 的主題，這裡列了幾個網站，當然你也可以自己找到你更喜歡的  
 
-* [http://jekyllthemes.org/](http://jekyllthemes.org/)  
-* [https://jekyllthemes.io/](https://jekyllthemes.io/)  
+- [http://jekyllthemes.org/](http://jekyllthemes.org/)  
+- [https://jekyllthemes.io/](https://jekyllthemes.io/)  
 
 官方文件中也有 [相關頁面](https://jekyllrb.com/docs/themes/)  
 
@@ -89,9 +89,9 @@ bundle exec jekyll server --watch
 ![](/assets/img/post/blog/dFfIkuG.png)
 
 ### 參考網站：
-* [建立一個屬於自己的(程式)部落格！. 透過 Github Page + Hexo來免費建立自己的Bl \| by 吳明倫 MingLun Wu \| Medium](https://minglun-wu.medium.com/%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%80%8B%E5%B1%AC%E6%96%BC%E8%87%AA%E5%B7%B1%E7%9A%84-%E7%A8%8B%E5%BC%8F-%E9%83%A8%E8%90%BD%E6%A0%BC-4d295ed96236) 
-* [Jekyll on Windows \| Jekyll • Simple, blog-aware, static sites](https://jekyllrb.com/docs/installation/windows/) 
-* [ruby on rails - bundle install returns "Could not locate Gemfile" - Stack Overflow](https://stackoverflow.com/questions/10012181/bundle-install-returns-could-not-locate-gemfile)
+- [建立一個屬於自己的(程式)部落格！. 透過 Github Page + Hexo來免費建立自己的Bl \| by 吳明倫 MingLun Wu \| Medium](https://minglun-wu.medium.com/%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%80%8B%E5%B1%AC%E6%96%BC%E8%87%AA%E5%B7%B1%E7%9A%84-%E7%A8%8B%E5%BC%8F-%E9%83%A8%E8%90%BD%E6%A0%BC-4d295ed96236) 
+- [Jekyll on Windows \| Jekyll • Simple, blog-aware, static sites](https://jekyllrb.com/docs/installation/windows/) 
+- [ruby on rails - bundle install returns "Could not locate Gemfile" - Stack Overflow](https://stackoverflow.com/questions/10012181/bundle-install-returns-could-not-locate-gemfile)
 
 ### 遇到問題彙整
 1. 無法執行 `$ bundle install`  
