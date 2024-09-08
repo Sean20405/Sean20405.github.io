@@ -61,7 +61,7 @@ refactor: true
 
         <div class="card-body d-flex flex-column">
           <h1 class="card-title my-2 mt-md-0">
-            {{ post.title }}
+            {{ post.title }} {{ post.last_modified_at }}
           </h1>
           {% if post.summary %}
             <div class="card-text post-content mt-0 mb-2">
