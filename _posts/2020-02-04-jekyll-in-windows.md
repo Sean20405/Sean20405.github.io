@@ -2,7 +2,7 @@
 title: 在 Windows 上用 Jekyll 架設自己的 Blog
 date: 2020-02-04 18:00:00 +0800
 author: Sean
-categories: [ 教學 ]
+categories: [ 技術分享 ]
 tags: [ Website, Jekyll, Cmder, GitHub Page ]
 summary: 既然這是這個網站的第一篇文章，那我就來記錄架設過程以及我遇到的問題吧
 ---
