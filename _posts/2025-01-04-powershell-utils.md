@@ -1,11 +1,11 @@
 ---
-title: 把 PowerShell 變得更 Zsh 一樣好用！
+title: 升級 Powershell：把 PowerShell 變得更 Zsh 一樣好用！
 date: 2025-06-17 23:13:00 +0800
 author: Sean
 categories: [ 技術分享 ]
 tags: [ powershell, zsh, development ]
 math: true
-summary: ㄏㄏ上學期的心得一樣又拖到開學後才打完
+summary: 在 PowerShell 安裝與設定 Oh My Posh 及一些 module，並設定主題，讓 PowerShell 擁有類似 Zsh 的主題美觀和 Auto Suggestion
 ---
 
 ![](/assets/img/post/powershell/demo.gif) 
