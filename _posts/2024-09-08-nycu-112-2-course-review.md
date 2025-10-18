@@ -124,6 +124,10 @@ Some kinds of Automata & Grammar & Language (Finite Automata, Regular Languages,
     - 學到很多聽過但不知道是什麼的東西，如 P&NP problem、SAT、Turing Machine
     - 而且老師很會教
 
+> **20251018 更新** \\
+> 到了大四發現這個領域越來越酷，最近也看到一些相關的影片，超級有趣，一起分享在這邊 \\
+> [(205) 【挑戰畢導】停機悖論三句話就能證明不完備性定理？#数学 #math - YouTube](https://youtu.be/Y1yUHnB9Mwg)
+
 ### [選修] 強化學習原理 教授：謝秉均
 #### 上課內容
 前面先講一些 RL 的基礎，接著會介紹各種 RL 以及一些演算法，詳細可以看這張上課簡報，幾乎涵蓋整學期會上到的演算法。而同時幾乎每個演算法都是一篇論文，所以這堂課也順便整理了 RL 的沿革。
