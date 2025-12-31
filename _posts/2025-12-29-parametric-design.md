@@ -7,23 +7,6 @@ tags: [ NYCU, 修課心得 ]
 summary: 隨堂練習成果，利用 Fusion360 繪製 3D 模型以熟悉軟體操作，並於期末完成個人專案設計，包含建模與 3D 列印。
 ---
 <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
-<script type="module">
-  const finalModelViewer = document.querySelector("model-viewer.final");
-  const label = document.querySelector("#model-label");
-  window.switchSrc = (element, name, labelText) => {
-    const base = "/assets/glb/" + name;
-    finalModelViewer.src = base + ".glb";
-    finalModelViewer.poster = base.replace("glb", "img/post/parametric-design") + ".png";
-    label.textContent = labelText;
-    const slides = document.querySelectorAll(".slide");
-    slides.forEach((element) => {element.classList.remove("selected");});
-    element.classList.add("selected");
-  };
-  document.querySelector(".slider").addEventListener('beforexrselect', (ev) => {
-    // Keep slider interactions from affecting the XR scene.
-    ev.preventDefault();
-  });
-</script>
 <style>
   model-viewer {
     width: 100%;
@@ -218,3 +201,17 @@ summary: 隨堂練習成果，利用 Fusion360 繪製 3D 模型以熟悉軟體�
 </div>
 
 ![](/assets/img/post/parametric-design/poster.png) 
+
+<script>
+  const finalModelViewer = document.querySelector("model-viewer.final");
+  const label = document.querySelector("#model-label");
+  window.switchSrc = (element, name, labelText) => {
+    const base = "/assets/glb/" + name;
+    finalModelViewer.src = base + ".glb";
+    finalModelViewer.poster = base.replace("glb", "img/post/parametric-design") + ".png";
+    label.textContent = labelText;
+    const slides = document.querySelectorAll(".slide");
+    slides.forEach((element) => {element.classList.remove("selected");});
+    element.classList.add("selected");
+  };
+</script>
