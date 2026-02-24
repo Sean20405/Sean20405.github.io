@@ -36,8 +36,8 @@ RISC-V Instruction Set、Single Cycle CPU、Pipeline CPU（含實作）、Cache 
     - 從這配分應該猜得到重點不在考試，而考試內容也確實不難，期中考甚至開放可以帶筆電或平板，原本還允許上網，但後來發現有人會直接查答案，所以當場改成只能看上課簡報，但還是很佛。期末可能為了避免上網，所以只能帶大抄
     - 好險期中可以帶筆電，不然那些 opcode 和 Instruction set 不可能背起來
 
-#### 分數
-- A+
+#### 分數分佈
+![](/assets/img/post/112-2CourseReview/CO.png)
 
 #### 評分
 - Workload：3 / 5
@@ -74,8 +74,8 @@ AI 最基礎的概念，包含 Regression、Classification、Search、RL、CV �
     - spec 給的蠻詳細的，照著做就不會有太大問題
     - 最後兩班會各選五組參加 workshop，最後選幾組得獎，但我們這組沒進所以就不知道其他細節了
 
-#### 分數
-- A+
+#### 分數分佈
+![](/assets/img/post/112-2CourseReview/I2AI.png)
 
 #### 評分
 - Workload：3 / 5
@@ -107,9 +107,6 @@ Some kinds of Automata & Grammar & Language (Finite Automata, Regular Languages,
 - Mid-term #2 30%
 - Final 40%
     - 對 全考試，我覺得第二次最難，不過和數電一樣，跟考古**非常**類似，所以蠻好準備的
-
-#### 分數
-- A+
 
 #### 評分
 - Workload：3.5 / 5
@@ -154,9 +151,6 @@ Some kinds of Automata & Grammar & Language (Finite Automata, Regular Languages,
     - ablation study，想辦法增減一些小東西來改善原演算法，最後要寫一份比較正式的書面報告和上台
     - 原本覺得很難，但實際做發現其實還好，而且助教給的 instruction 蠻仔細的，幾乎可以無腦照做。也因為是 ablation study 所以可以不用有太創新的想法（但也有些組別的做法超酷），主要時間反而是花在訓練 model 上，也是這堂課讓我一直抱怨文書筆電
 
-#### 分數
-- A+
-
 #### 評分
 - Workload：4.5 / 5
     - 比機率重，前期可以算 5，後期好一點
@@ -183,8 +177,8 @@ Some kinds of Automata & Grammar & Language (Finite Automata, Regular Languages,
 - 分組報告 25%
     - 這學期老師讓我們決定要做模擬 APEC 或單純分組上台報告，結果選上台報告的人比較多QQQQQ，這是我選這堂課的動力ㄝ，也算是這個老師的招牌吧，沒了很可惜，也導致這堂最後修的沒有很開心
 
-#### 分數
-- A+
+#### 分數分佈
+![](/assets/img/post/112-2CourseReview/international_relation.png)
 
 #### 評分
 - Workload：2 / 5
@@ -206,9 +200,6 @@ Some kinds of Automata & Grammar & Language (Finite Automata, Regular Languages,
     - 給定題目寫報告
     - 今年的題目：以一個理性公民的素養（不以政黨傾向，而以法案本質），你會如何分析、看待及思辨出最近的國會改革法案事件與目前部分團體圈圍國會塑造政治壓力事件的 the first principle 及處理（如果你有能力），從而你會建議政治神經科學（political neuroscience）/ 神經政治學（neuropolotics）未來應該研究的課題
     - 當時我寫的蠻上頭，剛好那時有時間 + 對這議題有興趣。但撇開主題外這就是一篇正常的報告
-
-#### 分數
-- A+
 
 #### 評分
 - Workload：1 / 5
@@ -243,9 +234,6 @@ Some kinds of Automata & Grammar & Language (Finite Automata, Regular Languages,
     - Data Fantasies
         > 數據如何能協助生活與社會變得更完美的文字、圖片或影音資料，並嘗試思考這些論述可能忽略的面向或是可能導致的問題
 - （剩下的不確定了，可能是課堂參與和討論）
-
-#### 分數
-- A+
 
 #### 評分
 - Workload：1.5 / 5
