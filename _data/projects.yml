@@ -1,0 +1,98 @@
+- title: CloudNest
+  image: /assets/img/homepage/projects/cloudnest.png
+  subtitle: FastAPI, PostgreSQL, Docker
+  award: 3rd Place in Hacker Group (CloudMosa), 2025 Meichu Hackathon
+  description: A labor matching platform for underserved regions. Architected and implemented a RESTful API backend and database to power a Cloud Phone-based platform.
+  links:
+    github: https://github.com/mch-cloudmosa-team4/CloudNest
+  featured: true
+  tags: [Web]
+
+- title: Bare-metal Kernel on Raspberry Pi
+  image: /assets/img/homepage/projects/osc.png
+  subtitle: C, Assembly
+  course: Operating System Capstone
+  description: Developed a 64-bit multitasking OS kernel from scratch. Engineered memory management, UART drivers, and a multi-tasking scheduler.
+  links:
+    github: https://github.com/Sean20405/NYCU-OSC
+  featured: true
+  tags: [System, Course Work]
+
+- title: fftconvolve2d
+  image: /assets/img/homepage/projects/fftconvolve.png
+  subtitle: C++, Python, pybind11
+  course: Numerical Software Development    
+  description: Engineered a cross-language faster 2D convolution solution using Fast Fourier Transform.
+  links:
+    github: https://github.com/Sean20405/fftconvolve2d
+  featured: false
+  tags: [Misc, Course Work]
+
+- title: Meichu Hackathon Web
+  image: /assets/img/homepage/projects/mch.png
+  subtitle: Vue.js, Tailwind CSS
+  description: Co-led development for the 2024 event platform. Facilitated sign-ups for 300+ participants.
+  links:
+    github: https://github.com/Official-Meichu-Hackathon/2024-signup
+    website: https://2024.meichuhackathon.org/
+  featured: true
+  tags: [Web]
+
+- title: Exposure Correction
+  image: /assets/img/homepage/projects/exposure-correction.png
+  subtitle: Python, OpenCV, PyTorch
+  course: Image Processing
+  description: Optimized Zero-DCE, a low-light enhancement approach, to address both over- and under-exposure challenges. Achieved a 144% improvement in PSNR and 54.5% in SSIM.
+  links:
+    github: https://github.com/ChuEating1005/Exposure-Correction
+  featured: false
+  tags: [CV/ML, Course Work]
+
+- title: Deep Learning for Visual Recognition
+  image: /assets/img/homepage/projects/dlvr.png
+  subtitle: Python, PyTorch
+  course: Selected Topics in Visual Recognition using Deep Learning    
+  description: Implemented computer vision models (ResNet, Faster R-CNN, Mask R-CNN, PromptIR) for classification, segmentation, and restoration. Optimized performance using data augmentation and cross-validation.
+  links:
+    github_list:
+      - name: Lab 1
+        url: https://github.com/Sean20405/NYCU-DLVR-HW1
+      - name: Lab 2
+        url: https://github.com/Sean20405/NYCU-DLVR-HW2
+      - name: Lab 3
+        url: https://github.com/Sean20405/NYCU-DLVR-HW3
+      - name: Lab 4
+        url: https://github.com/Sean20405/NYCU-DLVR-HW4
+  featured: false
+  tags: [CV/ML, Course Work]
+
+- title: Meichu Game Web
+  image: /assets/img/homepage/projects/meichu-game.png
+  subtitle: Vue.js, Cloudflare
+  description: Official web portal for the annual Meichu Game tournament. Re-architected into a monorepo and implemented edge routing via Cloudflare Workers for seamless historical site traffic.
+  links:
+    github: https://github.com/Meichu-Game-Website-Org/Meichu-Game-Website
+    website: https://meichu.games/
+  featured: true
+  tags: [Web]
+
+- title: Band System
+  image: /assets/img/homepage/projects/band-system.png
+  subtitle: React, Flask, PostgreSQL, AWS
+  course: Introduction to Database Systems
+  description: A full-stack application to pair up compatible band members with dynamic filtering, profile discovery, and invitation workflows. Deployed on AWS.
+  links:
+    github: https://github.com/Sean20405/band-system
+    website: https://band-system.github.io/#/home
+  featured: false
+  tags: [Web, Course Work]
+
+- title: Text-based Dungeon RPG
+  image: /assets/img/homepage/projects/dungeon.png
+  subtitle: C++
+  course: Data Structures and Object-oriented Programming    
+  description: A CLI game utilizing the concept of OOP. Features include character occupations, battle mechanics, and file saving/loading.
+  links:
+    github: https://github.com/Sean20405/Dungeon
+  featured: false
+  tags: [Misc, Course Work]

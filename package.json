@@ -17,7 +17,7 @@
     "test": "npx stylelint _sass/**/*.scss",
     "fixlint": "npm run test -- --fix",
     "deploy": "npm run build && bundle exec jekyll server --watch",
-    "preview": "bundle exec jekyll server --watch"
+    "preview": "bundle exec jekyll server --watch --host 0.0.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.21.3",
