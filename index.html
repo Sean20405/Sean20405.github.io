@@ -156,12 +156,12 @@ layout: page
     const projects = document.querySelectorAll(".project-card-container");
 
     let activeTag = "all";
-    let showAll = false; // Default is show featured only
+    let showAll = false;
 
     function filterProjects() {
       projects.forEach(project => {
         const isFeatured = project.dataset.featured === "true";
-        // Split and clean tags
+
         const tags = project.dataset.tags.split(",").map(t => t.trim().toLowerCase());
 
         let tagMatch = (activeTag === "all" || tags.includes(activeTag));
@@ -202,7 +202,6 @@ layout: page
       });
     });
 
-    // Initial filter
     filterProjects();
   });
 </script>
