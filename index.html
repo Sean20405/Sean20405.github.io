@@ -55,7 +55,19 @@ layout: page
   {% endunless %}
   {% endfor %}
   {% endfor %}
-  {% assign sorted_tags = all_tags | sort_natural %}
+  {% assign tag_order = "Web,CV/ML,System,Course Work,Misc" | split: "," %}
+  {% assign other_tags = all_tags | sort_natural %}
+  {% assign sorted_tags = "" | split: "," %}
+  {% for tag in tag_order %}
+  {% if all_tags contains tag %}
+  {% assign sorted_tags = sorted_tags | push: tag %}
+  {% endif %}
+  {% endfor %}
+  {% for tag in other_tags %}
+  {% unless tag_order contains tag %}
+  {% assign sorted_tags = sorted_tags | push: tag %}
+  {% endunless %}
+  {% endfor %}
   {% for tag in sorted_tags %}
   <button class="tag-filter" data-tag="{{ tag | downcase }}">{{ tag }}</button>
   {% endfor %}
