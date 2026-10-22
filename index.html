@@ -79,7 +79,7 @@ layout: page
   {% for project in site.data.projects %}
   <div class="project-card-container" data-featured="{{ project.featured }}"
     data-tags="{{ project.tags | join: ',' | downcase }}">
-    <div class="card shadow-sm border-0 custom-card overflow-hidden">
+    <div class="card border-0 custom-card overflow-hidden">
       <div class="row g-0 h-100">
         {% if project.image %}
         <div class="col-md-5 col-lg-4 d-flex align-items-center justify-content-center p-2 order-md-last">
@@ -172,26 +172,32 @@ layout: page
     let activeTag = "all";
     let showAll = false;
 
+    const MIN_PROJECTS_FOR_FEATURED = 3;
+
+    function hasActiveTag(project) {
+      const tags = project.dataset.tags.split(",").map(t => t.trim().toLowerCase());
+      return activeTag === "all" || tags.includes(activeTag);
+    }
+
     function filterProjects() {
+      const tagCount = Array.from(projects).filter(hasActiveTag).length;
+      const showEverything = showAll || tagCount < MIN_PROJECTS_FOR_FEATURED;
+
       projects.forEach(project => {
         const isFeatured = project.dataset.featured === "true";
-
-        const tags = project.dataset.tags.split(",").map(t => t.trim().toLowerCase());
-
-        let tagMatch = (activeTag === "all" || tags.includes(activeTag));
-        let featuredMatch = showAll || isFeatured;
-
-        if (tagMatch && featuredMatch) {
-          project.style.display = "";
-        } else {
-          project.style.display = "none";
-        }
+        const visible = hasActiveTag(project) && (showEverything || isFeatured);
+        project.style.display = visible ? "" : "none";
       });
+
+      if (showMoreBtn) {
+        showMoreBtn.parentElement.style.display = tagCount < MIN_PROJECTS_FOR_FEATURED ? "none" : "";
+      }
     }
 
     if (showMoreBtn) {
       showMoreBtn.addEventListener("click", function () {
         showAll = !showAll;
+        document.getElementById("projects-container").classList.toggle("show-all", showAll);
         const icon = this.querySelector('i');
         const text = this.querySelector('span');
         if (showAll) {
@@ -255,21 +261,7 @@ layout: page
   .custom-card {
     background-color: var(--main-bg);
     border: 1px solid var(--border-color) !important;
-    transition:
-      transform 0.5s var(--custom-easing),
-      box-shadow 0.5s var(--custom-easing),
-      border-color 0.5s var(--custom-easing);
-    border-radius: 0.75rem;
-  }
-
-  .custom-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
-    border-color: var(--link-color) !important;
-  }
-
-  html[data-mode="dark"] .custom-card:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4) !important;
+    border-radius: 0;
   }
 
   .custom-card .card-title {
@@ -458,16 +450,31 @@ layout: page
     font-size: var(--fs-body);
   }
 
+  #projects-container.show-all .project-card-container[data-featured="true"] .custom-card {
+    background-image: linear-gradient(rgba(250, 204, 21, 0.12), rgba(250, 204, 21, 0.12));
+  }
+
   .project-title {
     font-size: var(--fs-title);
     font-weight: 600;
     margin-bottom: 0;
     line-height: 1.2;
     color: var(--heading-color);
+    transition: color 0.3s var(--custom-easing);
+  }
+
+  .project-card-container .custom-card:hover .project-title {
+    color: #d2603a;
+  }
+
+  #projects-container {
+    gap: 1rem;
   }
 
   .project-card-container .card-body {
     position: relative;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
     padding-left: 1.75rem !important;
   }
 
@@ -476,8 +483,8 @@ layout: page
     content: '';
     position: absolute;
     left: 0;
-    top: 1rem;
-    bottom: 1rem;
+    top: 0.5rem;
+    bottom: 0.5rem;
     width: 2px;
     background-color: var(--link-color);
     border-radius: 2px;
@@ -488,7 +495,7 @@ layout: page
     content: '';
     position: absolute;
     left: 0;
-    top: 1rem;
+    top: 0.5rem;
     height: 0;
     width: 2px;
     background-color: #d2603a;
@@ -497,7 +504,7 @@ layout: page
   }
 
   .project-card-container .custom-card:hover .card-body::after {
-    height: calc(100% - 2rem);
+    height: calc(100% - 1rem);
   }
 
   /* Mobile-specific tweaks */

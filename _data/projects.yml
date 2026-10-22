@@ -70,10 +70,10 @@
   image: /assets/img/homepage/projects/dlp.png
   subtitle: Python, PyTorch, NumPy
   course: Deep Learning
-  description: Implemented seven labs covering backpropagation in NumPy, UNet segmentation, MaskGIT inpainting, conditional VAE video prediction, DQN variants, conditional diffusion, and A2C/PPO. Reached 0.934 Dice, 29.1 FID, and a Pong score of 19.95.
+  description: Implemented seven labs covering backpropagation in NumPy, UNet segmentation, MaskGIT inpainting, conditional VAE video prediction, DQN variants, conditional diffusion, and A2C/PPO.
   links:
     github: https://github.com/Sean20405/NYCU-DLP/
-  featured: false
+  featured: true
   tags: [CV/ML, Course Work]
 
 - title: Meichu Game Web
