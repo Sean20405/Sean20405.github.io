@@ -1,6 +1,6 @@
 - image: "/assets/img/homepage/experiences/ntu.jpg"
   image_alt: "NTU"
-  title: "M.S. in Computer Science and Information Engineering"
+  title: "M.S. in Graduate Institute of Networking and Multimedia"
   date: "Sep 2026 - Present"
   org: "National Taiwan University (NTU)"
   org_url: "https://www.ntu.edu.tw/"
@@ -31,7 +31,7 @@
   org: "Computational Photography Laboratory, NYCU"
   org_url: "https://cplab.cs.nycu.edu.tw/"
   description: >-
-    Advisor <a href="https://yulunalexliu.github.io/" target="_blank" class="theme-text-primary experience-link">Prof. Yu-Lun Liu</a>
+    Advisor: <a href="https://yulunalexliu.github.io/" target="_blank" class="theme-text-primary experience-link">Prof. Yu-Lun Liu</a>
 
 - image: "/assets/img/homepage/experiences/nycu.png"
   image_alt: "NYCU"
