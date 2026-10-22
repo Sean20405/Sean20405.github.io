@@ -4,6 +4,11 @@
   date: "Sep 2026 - Present"
   org: "National Taiwan University (NTU)"
   org_url: "https://www.ntu.edu.tw/"
+  lab: "CMLab"
+  lab_url: "https://www.cmlab.csie.ntu.edu.tw/"
+  description: >-
+    Advisors: <a href="https://www.csie.ntu.edu.tw/~cyy/" target="_blank" class="theme-text-primary experience-link">Prof. Yung-Yu Chuang</a>
+    and <a href="https://yulunalexliu.github.io/" target="_blank" class="theme-text-primary experience-link">Prof. Yu-Lun Liu</a>
 
 - image: "/assets/img/homepage/experiences/appier.jpg"
   image_alt: "Appier"
@@ -25,6 +30,8 @@
   date: "Jul 2024 - Present"
   org: "Computational Photography Laboratory, NYCU"
   org_url: "https://cplab.cs.nycu.edu.tw/"
+  description: >-
+    Advisor <a href="https://yulunalexliu.github.io/" target="_blank" class="theme-text-primary experience-link">Prof. Yu-Lun Liu</a>
 
 - image: "/assets/img/homepage/experiences/nycu.png"
   image_alt: "NYCU"
